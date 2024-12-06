@@ -1,0 +1,111 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.div{
+    margin-top: 60px;
+}
+.sale1{
+    width: 100%;
+    height: 400px;
+    border: 1px solid lightgray;
+    object-fit: cover;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "popins",sans-serif;
+    display: inline;
+    color: rgb(229, 106, 106);
+    margin: 20px;
+}
+
+p{
+    font-size: 1em;
+    padding: 2%;
+}  
+.one{
+  width: 100%;
+  height: 600px;
+  /* color: white; */
+  display: flex;
+  background: #d1c0c0;
+}  
+.one img{
+  width:60%;
+  height: 100%;
+  background: #877167;
+  padding: 1%;
+}
+.one .one-inside{
+  width: 40%;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#head{
+  padding: 50px;
+}
+h3{
+  color: rgb(241, 237, 237);
+  padding: 30px;
+  font-weight: 700;
+}
+.one-inside  p{
+  color: #fffdfd;
+  text-decoration: none;
+}
+
+button{
+  text-align: center;
+}
+.two{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0% 1%;
+}
+.two img {
+  transition: 0.5s;
+}
+.down-t{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.down-t >img {
+  width: 33%;
+  transition: 0.4s;
+}
+  .two img:hover{
+  scale: 1.05;
+}
+
+@media screen and(max-width:500px) {
+  .div{
+    width: 100vw;
+    padding: 0%;
+  }
+  .one{
+    width: 100%;
+  }
+  .one img{
+    width: 45%;
+  }
+  button{
+    padding: 5px 10px ;
+    font-size: 0.5em;
+  }
+  .one-inside{
+    width:100%;
+  }
+}
+
+
+
+
+

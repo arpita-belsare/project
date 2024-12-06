@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.m{
+    margin-top: 100px;
+}
+.Cartwrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid ridge;
+    height: auto;
+}
+.one-cart{
+width: 70%;
+border: 1px solid rgb(196, 195, 195);
+height: 120px;
+padding: 1% 2%;
+margin: 20px 5px ;
+display: flex;
+justify-content: space-between;
+box-shadow: 1px 1px 1px 3px gainsboro;
+}
+.one-cart:hover{
+    box-shadow: 1px 1px 1px 3px rgb(193, 189, 189);
+}
+.one-cart img{
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    /* margin: 2% 2.4%; */
+}
+h6{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(163, 162, 162);
+}
+p{
+    color: rgb(164, 164, 164);
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
+/* button{
+    padding: 10px 20px;
+    margin: 2%;
+} */
+
+/* button:hover{
+    padding:11px 21px ;
+    background: rgb(6, 92, 6);
+    color: aliceblue; 
+}*/
+
+@media screen and (max-width:500px) {
+    .one-cart{
+        width: 95%;
+        height: 80px;
+        padding: 0.2%;
+    }
+    .one-cart img{
+        width: 60px;
+        height: 70px;
+    }
+  h3{
+    font-size: 0.6em;
+    margin: 0%;
+  }
+
+}
