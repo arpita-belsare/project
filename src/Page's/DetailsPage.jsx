@@ -25,13 +25,16 @@ const DetailsPage = () => {
   const handleAddToCart = ()=>{
     addItem(product);
   }
+  
+  
+
 
   return (
     <div className="details-container">
       <h2>Product Details</h2>
       {product ? (
         <div>
-          <img src={product.image} alt={product.title} />
+          <img src={product.images} alt={product.title} />
          <div id="product-info">
          <h3> {product.title}</h3>
           <p> {product.description}</p>

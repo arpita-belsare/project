@@ -3,8 +3,8 @@ import { PRODUCT_API } from "../Constant/apiConstant";
 import axios from "axios";
 // import "../CSS/ProductCards.css";
 import { Link } from "react-router-dom";
-import star1 from "../Image/icons8-star-half-empty-48.png";
-import star2 from "../Image/icons8-star-48.png";
+// import star1 from "../Image/icons8-star-half-empty-48.png";
+// import star2 from "../Image/icons8-star-48.png";
 import useStore from "../Zustand/store";
 
 const ProductCards = () => {
@@ -15,7 +15,6 @@ const ProductCards = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
   useEffect(() => {
     if (searchText) {
       const normalizedSearchText = searchText.toLowerCase();
@@ -40,26 +39,20 @@ const ProductCards = () => {
   };
 
   return (
-    <div className="w-full flex mt-28">
-      <div className="flex flex-wrap">
+    <div className="w-full mt-2 border ">
+      <h1 className="text-center">Our Product  </h1>
+      <div className="flex flex-wrap justify-center px-4 py-14">
         {filteredProducts.length === 0 ? (
           <h1>No Products Found</h1>
         ) : (
           filteredProducts.map((product, index) => (
             <Link key={index} to={`/product/${product.id}`} className="mainCard">
-              <div className="mainCard2 flex">
+              <div className="flex">
                 <div>
-                  <img src={product.images} alt={product.title} style={imageSize} />
+                  <img src={product.image} alt={product.title} style={imageSize} />
                   <div className="product-info">
                     <h6>{product.title}</h6>
                     <h4>${product?.price}</h4>
-                    <span>
-                      {/* {product?.rating.rate}
-                      <img src={star2} alt="" />
-                      <img src={star2} alt="" />
-                      <img src={star2} alt="" />
-                      <img src={star1} alt="" /> */}
-                    </span>
                   </div>
                 </div>
               </div>
@@ -72,74 +65,3 @@ const ProductCards = () => {
 };
 
 export default ProductCards;
-
-
-
-
-
-
-
-
-
-
-
-      {/* <input
-        type="text"
-        className="search-input"
-        value={searchText}
-        placeholder="Search Products...."
-        // onChange={(e) => setSearchText(e.target.value)}
-        onChange={(e) => handleSearch(e.target.value)}
-      />
-      <div className="suggestions">
-        {focused &&
-          suggestions.length > 0 &&
-          suggestions?.map((product, index) => (
-            <div
-              key={index}
-              style={{ border: "1px solid grey"}}
-              onClick={() => handleSuggestionClick(product.title)}
-              onFocus={handleToggle}
-              className="suggestion-list"
-              // onBlur={}
-            >
-              {product.title}
-            </div>
-          ))}
-      </div> */}
-
-
-{/* <div className="cardWrapper">
-        {filteredProducts.length === 0 ? (
-          <h1>No Products found</h1>
-        ) : (
-          filteredProducts?.map((product, index) => {
-            return (
-              <Link
-                key={index}
-                to={`/product/${product.id}`}
-                className="mainCard">
-               <div className="mainCard2">
-               <div>
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    style={imageSize}
-                  />
-                 <div className="product-info">
-                 <h6> {product.title} </h6>
-                  <h4>${product?.price}</h4>
-                    <span> {product?.rating.rate} 
-                    <img src={star2} alt="" />
-                    <img src={star2} alt="" />
-                    <img src={star2} alt="" />
-                    <img src={star1} alt="" />
-                    </span>
-                 </div>
-               </div>
-                </div>
-              </Link>
-            );
-          })
-        )}
-      </div> */}
